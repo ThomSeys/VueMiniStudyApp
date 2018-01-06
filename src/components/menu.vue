@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Menu from '@/models/menu'
+import Menu from '../models/menu.js'
 
 export default {
   name: 'Header',
@@ -54,6 +54,7 @@ export default {
     color:#101421;
     padding: 2rem;
     transition:all 0.12s linear;
+    z-index:99;
 
     &.open{
       transform: translateX(-80vw);
@@ -67,8 +68,31 @@ export default {
           color:#101421;
           font-size:1.25rem;
           text-decoration:none;
-          display:bock;
+          display:block;
           padding: 0.5rem;
+      }
+
+      a{
+        position:relative;
+
+        &:before{
+          display:block;
+          content:"";
+          position:absolute;
+          left:0;
+          bottom:0;
+          height:4px;
+          width:0;
+          transition:all 0.12s linear;
+          background-color:#ffffff;
+        }
+
+        &:hover{
+          &:before{
+            width:50%;
+            background-color:#101421;
+          }
+        }
       }
     }
   }

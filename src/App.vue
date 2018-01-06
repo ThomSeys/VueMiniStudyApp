@@ -2,16 +2,31 @@
 	<div id="app">
 		<app-header></app-header>
 		<app-menu></app-menu>
-		<router-view></router-view>
+		<div v-bind:class="open ? 'blur' : ''">
+			<router-view></router-view>
+		</div>
 	</div>
 </template>
 
 <script>
-  import appHeader from "@/components/header"
-	import appMenu from "@/components/menu"
+  import appHeader from "./components/header.vue"
+	import appMenu from "./components/menu.vue"
   export default {
     name: 'app',
-		components:{appHeader, appMenu}
+		components:{appHeader, appMenu},
+		mounted(){
+			EventBus.$on('OpenMenu', this.openMenu);
+		},
+		data(){
+			return{
+				open:false
+			}
+		},
+		methods:{
+			openMenu(){
+				this.open = !this.open
+			}
+		}
   }
 </script>
 
@@ -26,5 +41,9 @@
 	}
 	body{
 		background-color:#1A2036;
+		margin:0;
+	}
+	.blur{
+		filter:blur(2px)
 	}
 </style>

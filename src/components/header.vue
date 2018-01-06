@@ -1,7 +1,8 @@
 <template>
 	<div class="header">
-	<div class="menu-btn" v-on:click="openMenu()">
-			<font-awesome-icon icon="bars" />
+	<div class="menu-btn" v-on:click="openMenu()" v-bind:class="open ? 'open' : ''">
+			<font-awesome-icon v-if="!open" icon="bars" />
+			<font-awesome-icon v-if="open" icon="times" />
 	</div>
 	</div>
 </template>
@@ -19,6 +20,7 @@
 	components:{FontAwesomeIcon},
 	methods:{
 		openMenu(){			
+			this.open = !this.open
 			EventBus.$emit('OpenMenu')
 		}
 	}
