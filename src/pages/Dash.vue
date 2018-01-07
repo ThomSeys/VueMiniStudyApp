@@ -1,25 +1,24 @@
 <template>
 	<div class="dash">
-		<section class="page-header">
-			<img src="https://unsplash.it/1200/800?image=100" />
-			<svg preserveAspectRatio="none" viewBox="0 0 40 100">
-      	<polygon points="100,100 100,0 0,100" opacity="1"></polygon>
-			</svg>
-
-			<section class="page-title">
-				<h1>Overview</h1>
+		<div class="row no-gutters">
+			<side-bar></side-bar>
+			<section class="col-9">
+				<page-header title="Dashboard" image="https://unsplash.it/1200/800?image=100"></page-header>
 			</section>
-		</section>
+		</div>
 	</div>
 </template>
 
 <script>
+	import pageHeader from "../components/page-header.vue"
+	import sideBar from "../components/sidebar.vue"
 	export default {
   name: 'Dashboard',
   data () {
     return {
     }
-  }
+  },
+	components:{pageHeader, sideBar}
 }
 
 </script>
@@ -56,7 +55,7 @@
 			position:absolute;
 			bottom:0;
 			right:0;
-			opacity:0.2;
+			opacity:0.5;
 			width:100%;
 			fill:#121421;
 		}
@@ -71,13 +70,14 @@
 			position:absolute;
 			right:1rem;
 			bottom:1rem;
-			width:50%;
-			font-size: 3rem;
+			max-width:80%;
+			font-size: 2.5rem;
 			text-transform:uppercase;
+			text-align:right;
 			h1{
-			font-weight:bold;
-			margin-bottom:0;
-			text-shadow:0 1px 1px #333333;
+				font-weight:bold;
+				margin-bottom:0;
+				text-shadow:0 1px 1px #333333;
 			}
 		}
 	}
