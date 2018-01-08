@@ -3,13 +3,7 @@
 		<div class="row no-gutters">
 			<side-bar></side-bar>
 			<section class="col-9">
-				<page-header title="Dashboard" image="https://unsplash.it/1200/800?image=100"></page-header>
-				<div class="dash-overview">
-					<div class="row">
-						<dashboard-block></dashboard-block>
-						<dashboard-block></dashboard-block>
-					</div>
-				</div>
+				<page-header title="Messages" image="https://unsplash.it/1200/800?image=151"></page-header>
 			</section>
 		</div>
 	</div>
@@ -18,15 +12,13 @@
 <script>
 	import pageHeader from "../components/page-header.vue"
 	import sideBar from "../components/sidebar.vue"
-	import dashboardBlock from "../components/dashboard-block.vue"
-
 	export default {
   name: 'Dashboard',
   data () {
     return {
     }
   },
-	components:{pageHeader, sideBar, dashboardBlock}
+	components:{pageHeader, sideBar}
 }
 
 </script>
@@ -50,10 +42,6 @@
 
 	a {
 		color: #42b983;
-	}
-
-	.dash-overview{
-		padding: 15px!important;
 	}
 
 	.page-header{

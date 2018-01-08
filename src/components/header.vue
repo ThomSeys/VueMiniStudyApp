@@ -72,7 +72,7 @@
 		left:0;
 		right:0;
 		height:60px;
-		background-color:#191F33;
+		background-color:rgba(25,31,51,1);
 		color:#ffffff;
 		border-bottom:1px solid #101421;
 		box-shadow: 0 2px 10px rgba(16,20,33,0.5);

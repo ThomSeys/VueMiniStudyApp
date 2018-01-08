@@ -40,7 +40,10 @@
 		margin-top: 60px;
 	}
 	body{
-		background-color:#1A2036;
+		background: #283c86;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to top, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 		margin:0;
 	}
 	.blur{

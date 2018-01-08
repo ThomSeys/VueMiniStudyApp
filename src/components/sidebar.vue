@@ -22,7 +22,7 @@
 <style lang="less">
   .side{
     height:calc(~"100vh - 60px");
-    background-color:#101421;
+    background-color:rgba(16,20,33,0.85);
 		box-shadow: 3px 0 10px rgba(16,20,33,0.5);
   }
   .user-navigation{
