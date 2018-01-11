@@ -2,16 +2,16 @@ import axios from "axios";
 
 class Menu {
   constructor(model) {
-    this._api = "https://jsonplaceholder.typicode.com/";
-    this._call = this._api + "users/";
-    this.url = model ? "comment/" + model.id : null;
-    this.title = model ? model.username : "Menu item";
+    this._api = "https://api.cosmicjs.com/v1/e9619d40-f4c6-11e7-95df-4fd6007b93a1/object-type/tests?pretty=true&hide_metafields=true&read_key=avGkZsYKgBMxj0b2AN8Tl4YqZL8dLyW3s5NUz2Lz2r3eKCvyrJ";
+    //
+    this.url = model ? model.slug : null;
+    this.title = model ? model.title : "Menu item";
   }
 
   all() {
     return axios
-      .get(this._call)
-      .then(response => Promise.resolve(response.data.map(this._wrap)))
+      .get(this._api)
+      .then(response => Promise.resolve(response.data.objects.map(this._wrap)))
       .catch(error => Promise.reject(error));
   }
 

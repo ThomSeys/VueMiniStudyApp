@@ -22,8 +22,8 @@
 <style lang="less">
   .side{
     height:calc(~"100vh - 60px");
-    background-color:rgba(16,20,33,0.85);
-		box-shadow: 3px 0 10px rgba(16,20,33,0.5);
+    background-color:#29ffc6;
+		box-shadow: 3px 0 10px -5px rgba(16,20,33,0.5);
   }
   .user-navigation{
     ul{
@@ -34,7 +34,7 @@
         margin:0;
         padding: 0.5rem 1rem 0.5rem 3rem;
         cursor:pointer;
-        color:#ffffff;
+        color:#101421;
         position:relative;
         transition:all 0.15s linear;
         svg{
@@ -45,6 +45,12 @@
 
         &:hover{
           background-color:#202634;
+          color:#ffffff;
+        }
+
+        &.router-link-exact-active{
+          background-color:#101421;
+          color:#ffffff;
         }
       }
     }

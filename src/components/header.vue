@@ -72,9 +72,10 @@
 		left:0;
 		right:0;
 		height:60px;
-		background-color:rgba(25,31,51,1);
+		background-color:#29ffc6;
 		color:#ffffff;
-		border-bottom:1px solid #101421;
+		border-bottom:1px solid #29ffc6;
 		box-shadow: 0 2px 10px rgba(16,20,33,0.5);
+		z-index:98;
 	}
 </style>

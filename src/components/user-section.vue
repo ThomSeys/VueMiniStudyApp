@@ -2,7 +2,7 @@
   <section class="user-section">
     <div class="user-picture">
       <div class="image-container">
-        <avatar username="Thomas Seyssens"></avatar>
+        <avatar username="Thomas Seyssens" backgroundColor="#101421" color="white"></avatar>
       </div>
     </div>
     <div class="user-name">
@@ -23,23 +23,29 @@ export default {
 
 <style scoped lang='less'>
   .user-section{
+    background-color:#ffffff;
+    padding-top:2.125rem;
+    padding-bottom:2.125rem;
+
     .user-picture{
       .vue-avatar--wrapper{
-          margin:2rem auto 1rem;
+          margin:0 auto 1rem;
           box-shadow:0 2px 3px rgba(0,0,0,0.8);
       }
     }
     .user-name{
-      color:#ffffff;
+      color:#101421;
+      font-weight:bold;
       p{
         margin-bottom:0;
       }
     }
     .user-function{
-      color:#DEDEDE;
+      color:#101421;
       font-size:0.875rem;
       margin-top:6px;
       padding-top:5px;
+      margin-bottom:0;
       position:relative;
       &:before{
         content:"";
@@ -50,6 +56,9 @@ export default {
         top:0;
         height:1px;
         background-color:#1A2036;
+      }
+      p{
+        margin-bottom:0;
       }
     }
   }
